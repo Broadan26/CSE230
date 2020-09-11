@@ -3,7 +3,7 @@
 #8 October
 
 .data
-.asciiz "Brandon Barrett" 	#0x10010000 to 0x1001000F 
+.asciiz "Brandon Pazzazz" 	#0x10010000 to 0x1001000F 
 .asciiz "\n"			#0x10010010 to 0x10010011
 .asciiz "Enter a number: "	#0x10010012 to 0x10010022
 .space 40			#0x10010024 Reserve 4 bytes * 10 spaces for array 40
@@ -16,7 +16,7 @@
 main:
 	addi $v0, $0, 4		#Load print string into syscall
 	lui $a0, 0x1001		#Load the base address of the string to $a0
-	syscall			#Print string "Brandon Barrett"
+	syscall			#Print string "Brandon Pazzazz"
 	addi $a0, $a0, 16	#Load base address of string to $a0
 	syscall			#Print the string "\n"
 	
